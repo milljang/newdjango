@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+        {% for post in post_list %}
+            <table>
+            <tr>
+                <td>{{ post.id}} </td>
+                <td>
+                    <a href="">{{ post.title }}</a>
+                </td>
+                <td>{{ post.content}} </td>
+                <td>{{ post.updated_at}} </td>
+            </tr>
+            </table>
+        {% endfor %}
+{% endblock %}
